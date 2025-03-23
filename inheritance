@@ -1,0 +1,47 @@
+class Parent:
+    def func1(self):
+        print(" This a parent class")
+
+class Parent1:
+    def func2(self):
+        print("this is a parent class")
+
+class Parent2:
+    def func3(self):
+        print("This is a parent2 class")
+
+class Grandparent:
+    def func4(self):
+        print("This is a grandparent class")
+
+class Parent3(Grandparent):
+    def func5(self):
+        print("This is a parent3 class")
+
+class Child1(Parent):
+    def func6(self):
+        print("This a child1 class")
+
+class Child2(Parent):
+    def func7(self):
+        print("This is child2 class")
+
+class Child3(Parent1, Parent2, Parent3):
+    def func8(self):
+        print("This is child3 class")
+
+Child1 = Child1()
+Child1.func1()
+Child1.func6()
+
+Child2 = Child2()
+Child2.func1()
+Child2.func7()
+
+Child3 = Child3()
+Child3.func2()
+Child3.func3()
+Child3.func4()
+
+Child3.func5()
+Child3.func8()
